@@ -5,18 +5,17 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/tvMovimientos"
-        android:text="Movimientos detectados:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"/>
 
     <TextView
         android:id="@+id/tvCalidad"
-        android:text="Calidad del sueño:"
+        android:text="Historial de Sueño:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

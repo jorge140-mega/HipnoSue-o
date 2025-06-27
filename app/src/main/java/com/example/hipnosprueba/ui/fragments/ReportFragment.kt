@@ -5,11 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hipnosprueba.R
 import com.example.hipnosprueba.databinding.FragmentReportBinding
+import com.example.hipnosprueba.ui.Adapter.ReportAdapter
+import com.example.hipnosprueba.ui.databases.AppDatabase
 
 
 class ReportFragment : Fragment() {
+
+    private val adapter = ReportAdapter()
     private var _binding: FragmentReportBinding? = null
     private val binding get() = _binding!!
 
@@ -25,19 +31,16 @@ class ReportFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val movimientos = 45
-        val calidad = when {
-            movimientos < 20 -> "Excelente"
-            movimientos < 50 -> "Moderada"
-            else -> "Mala"
+        binding.rvReport.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvReport.adapter = adapter
+
+        lifecycleScope.launchWhenStarted {
+            AppDatabase.getInstance(requireContext())
+                .sleepSessionDao()
+                .getAll()
+                .collect{ sessions ->
+                    adapter.submitList(sessions)
+                }
         }
-
-        binding.tvMovimientos.text = "Movimientos detectados: $movimientos"
-        binding.tvCalidad.text = "Calidad del sueño: $calidad"
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

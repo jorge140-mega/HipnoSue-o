@@ -19,13 +19,23 @@
         android:id="@+id/btnIniciar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#333333"
         android:text="Iniciar / Continuar" />
 
     <Button
         android:id="@+id/btnDetener"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FF0F0F"
         android:text="Detener y Guardar"
         android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/tvMovimientos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movimientos:"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.hipnosprueba.ui.fragments
 
+
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -12,8 +13,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
 import com.example.hipnosprueba.R
 import com.example.hipnosprueba.databinding.FragmentMonitorBinding
+import com.example.hipnosprueba.ui.databases.AppDatabase
+import com.example.hipnosprueba.ui.databases.Entitys.SleepSession
+import kotlinx.coroutines.launch
 
 
 class MonitorFragment : Fragment(), SensorEventListener {
@@ -66,8 +71,18 @@ class MonitorFragment : Fragment(), SensorEventListener {
         binding.btnDetener.setOnClickListener {
             if (isRunning) {
                 isRunning = false
+                lifecycleScope.launch{
+                    val db = AppDatabase.getInstance(requireContext())
+                    val session = SleepSession(
+                        durationSeconds = seconds,
+                        movements = movimientos
+                    )
+                    db.sleepSessionDao().insert(session)
+                }
                 sensorManager.unregisterListener(this)
-                handler.removeCallbacks(runnable)
+                handler.post {
+                    binding.tvMovimientos.text = "Movimientos: $movimientos"
+                }
                 Toast.makeText(requireContext(), "Movimientos detectados: $movimientos", Toast.LENGTH_LONG).show()
             }
         }
