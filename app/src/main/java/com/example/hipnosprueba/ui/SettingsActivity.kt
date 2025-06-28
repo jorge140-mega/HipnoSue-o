@@ -2,10 +2,12 @@ package com.example.hipnosprueba.ui
 
 import android.app.TimePickerDialog
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TimePicker
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.hipnosprueba.R
 import com.example.hipnosprueba.databinding.ActivitySettingsBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -23,15 +25,10 @@ class SettingsActivity : AppCompatActivity() {
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-        binding.toolbar.setNavigationOnClickListener{
-            finish()
-        }
+
 
         // Cargar la hora guardada previamente
-        val prefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
         savedHour = prefs.getInt(HOUR_KEY, 8)     // Por defecto 8:00 AM
         savedMinute = prefs.getInt(MINUTE_KEY, 0)
 
@@ -41,6 +38,17 @@ class SettingsActivity : AppCompatActivity() {
         binding.reminderButton.setOnClickListener {
             showTimePickerDialog()
         }
+        // Barra de navegación inferior
+        binding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.menu_back -> {
+                    finish()  // o onBackPressedDispatcher.onBackPressed()
+                    true
+                }
+                else -> false
+            }
+        }
+
     }
 
     private fun showTimePickerDialog() {

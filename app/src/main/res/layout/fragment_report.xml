@@ -7,14 +7,7 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:background="#121331"> <!-- Fondo oscuro tipo noche -->
-    <!-- Logo de la app -->
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/hipnos_logo_2"
-        android:layout_marginBottom="16dp"
-        android:layout_gravity="center_horizontal" />
+
 
     <!-- Header con título -->
     <TextView

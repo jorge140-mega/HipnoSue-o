@@ -7,22 +7,15 @@
     android:gravity="center_horizontal"
     android:background="#121331">
 
-    <!-- Logo de la app -->
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/hipnos_logo_2"
-    android:layout_marginBottom="16dp" />
-
     <!-- Título de pantalla -->
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Monitor de Sueño"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:textColor="#FFFFFF"
+        android:fontFamily="@font/jersey_regular"
         android:textStyle="bold"
         android:layout_marginBottom="30dp" />
 
@@ -65,7 +58,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Movimientos registrados:"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:fontFamily="@font/jersey_regular"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:layout_marginTop="8dp" />

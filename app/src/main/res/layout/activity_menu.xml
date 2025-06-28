@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/gradient"
-    android:padding="16dp">
+    android:padding="10dp">
     <!-- Logo de la app -->
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/hipnos_logo_2"
         android:layout_marginBottom="16dp"
         android:layout_gravity="center_horizontal" />
@@ -78,7 +78,7 @@
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="537dp"
+        android:layout_height="400dp"
         android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:background="@android:color/transparent" />
