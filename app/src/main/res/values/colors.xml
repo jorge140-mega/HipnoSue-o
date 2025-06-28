@@ -22,4 +22,9 @@
     <color name="on_background">#000000</color>
     <color name="on_surface">#000000</color>
     <color name="on_surface_variant">#757575</color>
+    <color name="hipnos_primary">#6C63FF</color>
+    <color name="hipnos_secondary">#A26EFF</color>
+    <color name="hipnos_accent">#B388FF</color>
+    <color name="hipnos_bottom">#2C2C54</color>
+
 </resources>
