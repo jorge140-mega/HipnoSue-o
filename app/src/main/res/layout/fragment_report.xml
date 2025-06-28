@@ -23,10 +23,11 @@
         android:layout_height="wrap_content"
         android:text="Historial de Sueño"
         android:textColor="#FFFFFF"
-        android:textSize="22sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginBottom="16dp" />
+        android:fontFamily="@font/jersey_regular"
+        android:layout_marginBottom="30dp" />
 
     <!-- Tarjeta resumen mensual -->
     <androidx.cardview.widget.CardView

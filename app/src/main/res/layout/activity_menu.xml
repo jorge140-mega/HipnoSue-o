@@ -75,16 +75,16 @@
         android:layout_weight="1"
         android:background="@android:color/transparent" />
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
-        android:layout_height="92dp"
-        android:layout_gravity="bottom"
-        android:background="@color/hipnos_bottom"
-        app:itemBackground="@drawable/nav_item_background"
-        app:itemIconTint="@drawable/nav_item_color_state"
-        app:itemRippleColor="@color/hipnos_accent"
-        app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_nav_menu" />
+        android:layout_height="56dp"
+    android:layout_gravity="bottom"
+    android:background="@color/hipnos_bottom"
+    app:itemBackground="@drawable/nav_item_background"
+    app:itemIconTint="@drawable/nav_item_color_state"
+    app:itemRippleColor="@color/hipnos_accent"
+    app:labelVisibilityMode="unlabeled"
+    app:menu="@menu/bottom_nav_menu" />
+
 </LinearLayout>
