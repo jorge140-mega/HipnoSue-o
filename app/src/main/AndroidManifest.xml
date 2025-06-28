@@ -33,9 +33,6 @@
         <!-- Otras activities -->
         <activity android:name=".ui.LoginActivity" />
         <activity android:name=".ui.RegisterActivity" />
-        <activity android:name=".ui.MonitorActivity" />
-        <activity android:name=".ui.ReportActivity" />
-        <activity android:name=".ui.StatsActivity" />
         <activity android:name=".ui.SettingsActivity" />
 
     </application>
