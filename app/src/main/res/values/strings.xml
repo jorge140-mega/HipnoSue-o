@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Hipnosprueba</string>
+    <string name="historial_sueno">HISTORIAL DE SUEÑO</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="resumen_mensual">Resumen Mensual</string>
+    <string name="duracion_promedio">Duración promedio</string>
+    <string name="calidad_promedio">Calidad promedio</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quality_slider_desc">Control deslizante para seleccionar rango de calidad de sueño entre 0% y 100%</string>
+    <string name="duration_slider_desc">Control deslizante para seleccionar rango de duración de sueño entre 0 y 12 horas</string>
 </resources>
