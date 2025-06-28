@@ -5,37 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#121331"> <!-- Fondo oscuro tipo noche -->
 
-    <!-- Header con título y posible filtro -->
-    <LinearLayout
+    <!-- Header con título -->
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="16dp">
+        android:text="Historial de Sueño"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
 
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="HISTORIAL DE SUEÑO"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_weight="1"/>
-
-
-    </LinearLayout>
-
-    <!-- Tarjeta resumen -->
+    <!-- Tarjeta resumen mensual -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="@color/colorCardBackground">
+        app:cardElevation="6dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#1F1F3A"> <!-- Color profundo -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,15 +39,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Resumen Mensual"
-                android:textColor="@color/colorPrimary"
+                android:textColor="#8AB4F8"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="12dp">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -69,16 +61,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="6.2h"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="24sp"
-                        android:textStyle="bold"/>
+                        android:textColor="#FFFFFF"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Duración promedio"
-                        android:textColor="@color/colorTextSecondary"
-                        android:textSize="12sp"/>
+                        android:textColor="#BBBBBB"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -93,16 +85,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="78%"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="24sp"
-                        android:textStyle="bold"/>
+                        android:textColor="#FFFFFF"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Calidad promedio"
-                        android:textColor="@color/colorTextSecondary"
-                        android:textSize="12sp"/>
+                        android:textColor="#BBBBBB"
+                        android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -114,14 +106,15 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         app:cardElevation="4dp"
-        app:cardCornerRadius="8dp">
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#1F1F3A">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvReport"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:clipToPadding="false"
             android:padding="8dp"
-            tools:listitem="@layout/item_session"/>
+            android:clipToPadding="false"
+            tools:listitem="@layout/item_session" />
     </androidx.cardview.widget.CardView>
 </LinearLayout>
