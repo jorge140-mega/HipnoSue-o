@@ -5,64 +5,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@drawable/gradient"
+    android:padding="10dp">
+    <!-- Logo de la app -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/hipnos_logo_2"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal" />
 
     <!-- Título -->
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Control de Sueño"
-        android:textSize="24sp"
-        android:layout_gravity="center_horizontal" />
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/jersey_regular"
+        />
 
     <!-- Botones tipo tabs -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
 
         <Button
             android:id="@+id/btnMonitor"
             android:text="Monitoreo"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/hipnos_primary"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/jersey_regular"
+            android:background="@drawable/rounded_button" />
 
         <Button
             android:id="@+id/btnReport"
             android:text="Reporte"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/hipnos_secondary"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/jersey_regular"
+            android:background="@drawable/rounded_button" />
 
         <Button
             android:id="@+id/btnStats"
             android:text="Estadísticas"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/hipnos_accent"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/jersey_regular"
+            android:background="@drawable/rounded_button" />
     </LinearLayout>
 
     <!-- Contenedor para fragments -->
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
-        android:layout_marginTop="16dp" />
+        android:background="@android:color/transparent" />
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
-        style="@style/BottomNavigationTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@android:color/transparent"
-        app:elevation="0dp"
-        app:itemBackground="@android:color/transparent"
-        app:itemIconTint="@drawable/nav_item_color_state"
-        app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_nav_menu" />
+    android:layout_gravity="bottom"
+    android:background="@color/hipnos_bottom"
+    app:itemBackground="@drawable/nav_item_background"
+    app:itemIconTint="@drawable/nav_item_color_state"
+    app:itemRippleColor="@color/hipnos_accent"
+    app:labelVisibilityMode="unlabeled"
+    app:menu="@menu/bottom_nav_menu" />
+
 </LinearLayout>

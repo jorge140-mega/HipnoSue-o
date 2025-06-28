@@ -4,38 +4,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="#121331">
 
+    <!-- Título de pantalla -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monitor de Sueño"
+        android:textSize="35sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/jersey_regular"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Cronómetro -->
     <TextView
         android:id="@+id/tvCronometro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:00:00"
-        android:textSize="48sp"
+        android:textSize="56sp"
+        android:textColor="#8AB4F8"
         android:textStyle="bold"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="32dp" />
 
+    <!-- Botón iniciar -->
     <Button
         android:id="@+id/btnIniciar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#333333"
-        android:text="Iniciar / Continuar" />
+        android:backgroundTint="#1F6FEB"
+        android:textColor="#FFFFFF"
+        android:text="Iniciar / Continuar"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_rounded_blue" />
 
+    <!-- Botón detener -->
     <Button
         android:id="@+id/btnDetener"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FF0F0F"
+        android:backgroundTint="#FF5C5C"
+        android:textColor="#FFFFFF"
         android:text="Detener y Guardar"
-        android:layout_marginTop="16dp" />
+        android:background="@drawable/btn_rounded_red"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Movimientos -->
     <TextView
         android:id="@+id/tvMovimientos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Movimientos:"
-        android:textSize="18dp"
+        android:text="Movimientos registrados:"
+        android:textSize="20sp"
+        android:fontFamily="@font/jersey_regular"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:layout_marginTop="20dp"/>
-
+        android:layout_marginTop="8dp" />
 </LinearLayout>

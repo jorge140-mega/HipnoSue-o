@@ -13,13 +13,19 @@
     <color name="your_selected_color">#0328FD</color> <!-- Color cuando está seleccionado -->
     <color name="your_unselected_color">#757575</color> <!-- Color cuando no está seleccionado -->
     <color name="colorBackground">#F5F5F5</color>
-    <color name="colorCardBackground">#FFFFFF</color>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorTextSecondary">#757575</color>
     <color name="background">#F5F5F5</color>
     <color name="surface">#FFFFFF</color>
     <color name="on_background">#000000</color>
     <color name="on_surface">#000000</color>
     <color name="on_surface_variant">#757575</color>
+    <color name="hipnos_primary">#6C63FF</color>
+    <color name="hipnos_secondary">#A26EFF</color>
+    <color name="hipnos_accent">#B388FF</color>
+    <color name="hipnos_bottom">#2C2C54</color>
+    <color name="colorPrimaryDark">#0D0D24</color>
+    <color name="colorPrimary">#8AB4F8</color>
+    <color name="colorCardBackground">#1F1F3A</color>
+    <color name="colorTextSecondary">#BBBBBB</color>
+
+
 </resources>
