@@ -10,8 +10,10 @@ import com.example.hipnosprueba.ui.fragments.MonitorFragment
 import com.example.hipnosprueba.ui.fragments.ReportFragment
 import com.example.hipnosprueba.ui.fragments.SettingsFragment
 import com.example.hipnosprueba.ui.fragments.StatsFragment
-
+private val REQUEST_CODE_NOTIFICATIONS = 1001
 class MainActivity : AppCompatActivity() {
+
+
 
     private lateinit var binding: ActivityMenuBinding
 
@@ -58,4 +60,6 @@ class MainActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
     }
+
+
 }
